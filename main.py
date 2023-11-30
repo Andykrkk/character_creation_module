@@ -21,9 +21,9 @@ def attack(char_name, char_class):
 def defence(char_name, char_class):
     """Реализация срабатывания защиты."""
     if char_class == 'warrior':
-        return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
+        return (f'{char_name} блокировал {10 + randint(5, 10)} ед. урона')
     if char_class == 'mage':
-        return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
+        return (f'{char_name} блокировал {10 + randint(-2, 2)} ед. урона')
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
     return (f'{char_name} блокировал 0 урона')
@@ -46,7 +46,7 @@ def special(char_name, char_class) -> str:
 def start_training(char_name, char_class):
     """Функция для реализации механизма тернировки."""
     if char_class == 'warrior':
-        print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
+        print(f'{char_name}, ты Воитель — великий мастер ближнего боя.')
     if char_class == 'mage':
         print(f'{char_name}, ты Маг — превосходный укротитель стихий.')
     if char_class == 'healer':
@@ -56,7 +56,7 @@ def start_training(char_name, char_class):
           ' defence — чтобы блокировать атаку противника или '
           'special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd = ''
+    cmd = None
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
@@ -79,7 +79,11 @@ def choice_char_class():
         if char_class == 'warrior':
             print('Воитель — дерзкий воин ближнего боя. '
                   'Сильный, выносливый и отважный.')
+            print('Воитель — дерзкий воин ближнего боя. '
+                  'Сильный, выносливый и отважный.')
         if char_class == 'mage':
+            print('Маг — находчивый воин дальнего боя. '
+                  'Обладает высоким интеллектом.')
             print('Маг — находчивый воин дальнего боя. '
                   'Обладает высоким интеллектом.')
         if char_class == 'healer':
