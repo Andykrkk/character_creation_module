@@ -4,6 +4,7 @@ from random import randint
 # Из модуля start_game_banner, который расположен в папке graphic_arts,
 # импортируем функцию run_screensaver().
 from graphic_arts.start_game_banner import run_screensaver
+'''без ООП'''
 
 
 def attack(char_name, char_class):
